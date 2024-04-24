@@ -17,7 +17,7 @@ resource "aws_iam_role" "lambda_exec_role" {
         "Service": "lambda.amazonaws.com"
       },
       "Effect": "Allow",
-      "Sid": ""
+      "Sid": "first"
     }
   ]
 }
