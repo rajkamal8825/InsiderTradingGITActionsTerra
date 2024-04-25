@@ -44,11 +44,11 @@ resource "aws_iam_role_policy_attachment" "ses_full_access_policy_attachment" {
 
 resource "aws_lambda_function" "insidertradinglambda" {
   function_name = "insidertradinglambda"
-  handler       = "main.handler"  # replace with your handler
+  handler       = "lambda_function.handler"  # replace with your handler
   runtime       = "python3.8"  # replace with your runtime
 
-  filename      = "<lambda_function_file.zip>"
-  source_code_hash = filebase64sha256("<lambda_function_file.zip>")
+  filename      = "lambda_function_payload.zip"
+  source_code_hash = filebase64sha256("lambda_function_payload.zip")
 
   role          = aws_iam_role.lambda_exec_role.arn
 }
