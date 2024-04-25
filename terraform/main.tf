@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "insidertradingstatefile"
+    key    = "firstproject/one"
+    region = "us-east-1"
+  }
+}
+
 provider "aws" {
   region = "us-east-1"  # replace with your AWS region
   access_key = var.access_key
