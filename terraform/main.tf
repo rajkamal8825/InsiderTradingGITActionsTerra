@@ -45,8 +45,8 @@ resource "aws_lambda_function" "insidertradinglambda" {
   handler       = "lambda_function.handler"  # replace with your handler
   runtime       = "python3.8"  # replace with your runtime
 
-  filename      = "../src/lambda_function_payload.zip"
-  source_code_hash = filebase64sha256("../src/lambda_function_payload.zip")
+  filename      = "../lambda_function_payload.zip"
+  source_code_hash = filebase64sha256("../lambda_function_payload.zip")
 
   role          = aws_iam_role.lambda_exec_role.arn
 }
