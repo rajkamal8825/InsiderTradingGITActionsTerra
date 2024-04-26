@@ -41,7 +41,7 @@ resource "aws_iam_role_policy_attachment" "ses_full_access_policy_attachment" {
 }
 
 resource "aws_lambda_function" "insidertradinglambda" {
-  function_name = "insidertradinglambda"
+  function_name = "insidertradinglambdaterra"
   handler       = "lambda_function.handler"  # replace with your handler
   runtime       = "python3.8"  # replace with your runtime
 
